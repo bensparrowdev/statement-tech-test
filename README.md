@@ -1,5 +1,3 @@
-\
-
 ### Responsive landing page with add to bag functionality
 
 A very simple landing page for a fictional pet brand showing 1 of their products for sale.\
