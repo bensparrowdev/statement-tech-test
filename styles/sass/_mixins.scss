@@ -1,0 +1,86 @@
+//Mixin Templates
+
+//button template
+@mixin button {
+	color: $white;
+	background: $primary;
+	padding: 22px 55px;
+	margin: 12px;
+	border: none;
+	border-radius: 40px;
+	letter-spacing: 2px;
+	font-size: 0.9rem;
+	font-weight: 400;
+	cursor: pointer;
+
+	&:hover {
+		background: $primary-hover;
+	}
+
+	@include lg {
+		padding: 15px 45px;
+		margin: 10px;
+		font-size: 0.7rem;
+	}
+}
+
+//product card template
+@mixin productCard {
+	background-color: $white;
+	border-radius: 6px;
+	padding: 30px 20px;
+	box-shadow: 1px 1px 20px -6px rgba(0, 0, 0, 0.2);
+
+	@include lg {
+		width: 320px;
+		padding: 0;
+	}
+
+	.content__shop__card__product {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 25px 20px;
+
+		@include lg {
+			padding-bottom: 35px;
+		}
+
+		img {
+			width: 380px;
+			height: auto;
+			margin-bottom: 10px;
+
+			@include lg {
+				width: 300px;
+			}
+		}
+
+		h5 {
+			padding: 10px 30px;
+			text-align: center;
+			line-height: 1.5;
+
+			@include lg {
+				font-size: 1.2rem;
+			}
+		}
+
+		p {
+			color: $primary;
+			font-weight: 700;
+			letter-spacing: 2px;
+			font-size: 1.2rem;
+			margin: 12px 0;
+
+			@include lg {
+				font-size: 1rem;
+				margin: 10px 0;
+			}
+		}
+
+		button {
+			@include button;
+		}
+	}
+}
